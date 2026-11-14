@@ -10,7 +10,8 @@
 | Track | T02 — Raw QC Triage |
 | Người thực hiện | Nguyễn Thành Tài — owner, implementer, reviewer, report |
 | Git URL | [NTT19/K5-Day6-L2-NguyenThanhTai-2A202603038-DataGovernanceAndPrivacy](https://github.com/NTT19/K5-Day6-L2-NguyenThanhTai-2A202603038-DataGovernanceAndPrivacy) (`origin`) |
-| Tag demo/final | Chưa tạo |
+| Tag `demo-180m` | Annotated tag trỏ đến commit `f4d0d343344a27dc1bd2fee298cf22fa5c18beac`; tạo lúc 2026-11-14 17:33:43 +0700 |
+| Tag `final-24h` | Chưa tạo |
 | Ngày ghi nhận | 2026-11-14 |
 
 ## 01 · Bài toán và tiêu chí quyết định
@@ -112,6 +113,8 @@ Lệnh evaluate/compare sau khi có GT hợp lệ:
 
 Môi trường ghi trong `out/poc/run_info.json`: Python 3.15.2, Windows 11, CPU `Intel64 Family 6 Model 140 Stepping 1, GenuineIntel`; run PoC được tạo khi HEAD là `b0ce8bf`, trước commit cá nhân. Mã nguồn và test T02 hiện nằm trong commit `a296de7` (`feat(t02): implement QC triage pipeline and Laplacian baseline`). Baseline `run_info.json` ghi `git_sha: null` do lệnh Git trong môi trường sandbox không nhận quyền sở hữu thư mục; mã nguồn được chạy từ cùng checkout local. README khuyến nghị Python 3.11–3.13, nên môi trường 3.15.2 này cần được đối chiếu khi tái lập ở máy khác.
 
+Tag `demo-180m` có tag object `3f23a95eaebc79ca70b2c98eb06cf42ac36e93c1`, message `Demo freeze at minute 180` và trỏ tới commit báo cáo `f4d0d34`. Thời điểm tạo thực tế là 2026-11-14 17:33:43 +0700 theo Git; tên tag không tự chứng minh nó được tạo đúng phút 180 của buổi lab.
+
 Kiểm tra lần này: `python -m tools.preflight` có **0 FAIL, 2 WARN** (dữ liệu thật và model tùy chọn không có); `python -m tools.verify_manifests` có **14 manifest hợp lệ, 0 lỗi**; `.\.venv\Scripts\python.exe -m pytest -q` có **48 passed, 39 skipped, 0 failed**. Các test cần GT được skip theo `tests/conftest.py`. Test CLI cũ kỳ vọng exit code 3 đã được cập nhật thành test pipeline thành công; đã bổ sung test từ chối review file có score cũ. Pytest có một cảnh báo ghi cache trong sandbox, không ảnh hưởng exit code 0.
 
 ## 08 · Giới hạn và trách nhiệm
@@ -135,7 +138,7 @@ Nguyễn Thành Tài thực hiện bài theo hình thức cá nhân: cấu hình
 ## 11 · Việc còn lại trước khi nộp
 
 - Cần ground truth/overlay do giảng viên cấp để tạo metrics baseline/PoC và bảng so sánh bằng script.
-- Commit cá nhân đã có; hai tag `demo-180m` và `final-24h` hiện chưa có. Repo đã có remote `origin`.
+- Commit cá nhân và tag `demo-180m` đã có; tag `final-24h` chưa tạo. Repo đã có remote `origin`.
 - Cần xác minh kết quả trên Python 3.11–3.13 theo môi trường được README khuyến nghị nếu nộp ở máy khác.
 
 Các mục trên được để mở thay vì bịa metric, commit, remote hoặc tag.
