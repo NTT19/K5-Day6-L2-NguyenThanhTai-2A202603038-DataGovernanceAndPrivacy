@@ -14,11 +14,29 @@ from src.common.gt_guard import GroundTruthAccessError, disable_gt_guard, enable
 from src.common.offline import NetworkBlockedError, disable_offline_guard, enable_offline_guard
 
 
-def test_template_pipeline_fails_clearly_not_silently(tmp_path):
+def test_t02_pipeline_writes_ranked_output_and_waits_for_review(tmp_path):
     rc = runner.main(["--track", "t02", "--output", str(tmp_path), "--offline"])
-    assert rc == 3                                   # NotImplemented -> explicit exit code
+    assert rc == 0
     info = json.loads((tmp_path / "run_info.json").read_text())
-    assert info["status"] == 3 and info["seed"] == 42
+    assert info["status"] == 0 and info["seed"] == 42
+    assert info["stats"]["n_items"] == 96
+    assert len(pd.read_csv(tmp_path / "ranked_review.csv")) == 96
+    assert len(pd.read_csv(tmp_path / "review_queue.csv")) == 20
+    decision = json.loads((tmp_path / "decision.json").read_text())
+    assert decision["status"] == "HOLD" and decision["reason_code"] == "REVIEW_PENDING"
+
+
+def test_t02_pipeline_rejects_stale_review_scores(tmp_path):
+    assert runner.main(["--track", "t02", "--output", str(tmp_path), "--offline"]) == 0
+    queue = pd.read_csv(tmp_path / "review_queue.csv", dtype=str, keep_default_na=False)
+    queue.loc[0, "score"] = str(float(queue.loc[0, "score"]) + 0.01)
+    queue.loc[0, "reviewer"] = "QA reviewer"
+    queue.loc[0, "reviewer_decision"] = "approve"
+    queue.to_csv(tmp_path / "review_queue_reviewed.csv", index=False)
+
+    assert runner.main(["--track", "t02", "--output", str(tmp_path), "--offline"]) == 2
+    info = json.loads((tmp_path / "run_info.json").read_text())
+    assert info["status"] == 2
 
 
 def _run_baseline(out):
