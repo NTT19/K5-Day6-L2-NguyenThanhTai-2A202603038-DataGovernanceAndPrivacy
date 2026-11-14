@@ -1,6 +1,2 @@
 member,git_author_name,git_email,role,modules_files,commit_shas,evidence_note,presenter
-Member 1,,,Lead / Integrator,src/main.py; configs/,,,
-Member 2,,,Data & fixtures,fixtures/; tools/,,,
-Member 3,,,Core algorithm,src/pipeline.py,,,
-Member 4,,,QA / metric,tests/; reports/metrics_*.json,,,
-Member 5,,,Human review + report,reports/group_report.md; demo/,,,
+Nguyễn Thành Tài (solo),Nguyễn Thành Tài,thanhtai5223@gmail.com,"Solo owner/reviewer; pipeline and report work with coding-assistant support","src/pipeline.py; src/examples/laplacian_baseline.py; tests/test_cli.py; configs/lab.yaml; reports/metric_contract.md; reports/group_report.md; reports/review_queue.csv; reports/decision_log.csv; out/poc/*; out/baseline/*",a296de7,"Commit a296de7 chứa pipeline T02, baseline Laplacian, cấu hình và test; review 20 ảnh có bằng chứng trong reports/review_queue.csv. Báo cáo và CSV review được ghi bằng commit docs(t02) riêng.",yes

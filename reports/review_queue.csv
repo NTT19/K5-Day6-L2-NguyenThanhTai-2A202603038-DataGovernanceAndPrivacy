@@ -1,0 +1,21 @@
+rank,item_id,score,reason,suggested_action,slice,evidence_path,reviewer,reviewer_decision,override_value,review_note,reviewed_at
+1,img_06_3,0.982271,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_06_3.jpg,Nguyễn Thành Tài,reject,,Cảnh đêm vẫn đọc được; xe và người còn nhận diện được.,2026-11-14T08:56:42.786Z
+2,img_03_2,0.873666,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_03_2.jpg,Nguyễn Thành Tài,reject,,Ảnh đêm nhưng đường và phương tiện vẫn nhìn rõ.,2026-11-14T08:56:42.786Z
+3,img_18_2,0.870443,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_18_2.jpg,Nguyễn Thành Tài,reject,,"Cảnh còn rõ, chưa thấy lỗi chất lượng nghiêm trọng.",2026-11-14T08:56:42.786Z
+4,img_06_0,0.821715,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_06_0.jpg,Nguyễn Thành Tài,reject,,Cảnh đêm vẫn sử dụng được; không thấy mờ nặng.,2026-11-14T08:56:42.786Z
+5,img_12_3,0.8,blur_risk,RECAPTURE_IF_DEFECT_CONFIRMED,dusk,images/img_12_3.jpg,Nguyễn Thành Tài,approve,,Ảnh quá tối; nhiều chi tiết trên đường gần như không nhìn thấy.,2026-11-14T08:56:42.786Z
+6,img_13_3,0.8,blur_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_13_3.jpg,Nguyễn Thành Tài,approve,,Ảnh bị nhòe rõ; xe và vật thể mất chi tiết.,2026-11-14T08:56:42.786Z
+7,img_15_3,0.8,blur_risk,RECAPTURE_IF_DEFECT_CONFIRMED,dusk,images/img_15_3.jpg,Nguyễn Thành Tài,approve,,Ảnh thiếu sáng nghiêm trọng; khó kiểm tra xe và người.,2026-11-14T08:56:42.786Z
+8,img_17_3,0.8,blur_risk,RECAPTURE_IF_DEFECT_CONFIRMED,day,images/img_17_3.jpg,Nguyễn Thành Tài,approve,,Ảnh rất tối; nhiều vật thể chỉ còn là bóng.,2026-11-14T08:56:42.786Z
+9,img_18_3,0.8,blur_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_18_3.jpg,Nguyễn Thành Tài,approve,,Ảnh bị nhòe mạnh; các chi tiết chính khó nhận biết.,2026-11-14T08:56:42.786Z
+10,img_23_3,0.8,blur_risk,RECAPTURE_IF_DEFECT_CONFIRMED,day,images/img_23_3.jpg,Nguyễn Thành Tài,approve,,Ảnh quá tối; xe và cảnh đường khó quan sát.,2026-11-14T08:56:42.786Z
+11,img_07_2,0.799239,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,day,images/img_07_2.jpg,Nguyễn Thành Tài,reject,,"Dù hơi tối, cảnh và phương tiện vẫn nhận diện được.",2026-11-14T08:56:42.786Z
+12,img_03_3,0.777685,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_03_3.jpg,Nguyễn Thành Tài,reject,,Cảnh đêm vẫn đủ rõ để quan sát các phương tiện.,2026-11-14T08:56:42.786Z
+13,img_03_0,0.749166,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_03_0.jpg,Nguyễn Thành Tài,reject,,Ảnh còn rõ; chưa thấy lỗi mờ hoặc lóa nghiêm trọng.,2026-11-14T08:56:42.786Z
+14,img_08_3,0.74571,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,dusk,images/img_08_3.jpg,Nguyễn Thành Tài,approve,,Cảnh chạng vạng quá tối; xe phía trước khó kiểm tra.,2026-11-14T08:56:42.786Z
+15,img_06_2,0.730897,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_06_2.jpg,Nguyễn Thành Tài,approve,,Có nhiễu và hiện tượng vỡ khối nhìn thấy được.,2026-11-14T08:56:42.786Z
+16,img_02_3,0.715568,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,day,images/img_02_3.jpg,Nguyễn Thành Tài,reject,,Cảnh hơi tối nhưng xe và vạch đường vẫn nhận ra được.,2026-11-14T08:56:42.786Z
+17,img_10_3,0.678964,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,day,images/img_10_3.jpg,Nguyễn Thành Tài,reject,,Ảnh hơi tối nhưng các vật thể chính vẫn nhìn thấy.,2026-11-14T08:56:42.786Z
+18,img_18_0,0.670981,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_18_0.jpg,Nguyễn Thành Tài,reject,,Cảnh đêm vẫn rõ; chưa thấy nhòe nghiêm trọng.,2026-11-14T08:56:42.786Z
+19,img_22_2,0.668677,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,dusk,images/img_22_2.jpg,Nguyễn Thành Tài,approve,,"Ảnh có nhiễu/vỡ khối rõ, làm giảm chất lượng quan sát.",2026-11-14T08:56:42.786Z
+20,img_01_2,0.653554,dark_risk,RECAPTURE_IF_DEFECT_CONFIRMED,night,images/img_01_2.jpg,Nguyễn Thành Tài,approve,,Ảnh rất tối; chi tiết xe và mặt đường khó quan sát.,2026-11-14T08:56:42.786Z

@@ -1,0 +1,4 @@
+ts,scope,status,canonical,reason_code,reason,owner,evidence
+2026-11-14T08:24:28+00:00,t02,HOLD,HOLD,REVIEW_PENDING,Review is incomplete: 0/20 completed; 0 item(s) skipped,Nguyễn Thành Tài - owner,out\poc\ranked_review.csv;out\poc\review_queue.csv;out\poc\audit_log.jsonl
+2026-11-14T09:00:25+00:00,t02,REWORK,REWORK,CONFIRMED_DEFECTS,Reviewer confirmed defects in 10 image(s); recapture or repair is needed,Nguyễn Thành Tài - owner,out\poc\ranked_review.csv;out\poc\review_queue.csv;out\poc\audit_log.jsonl
+2026-11-14T09:01:18+00:00,t02,REWORK,REWORK,CONFIRMED_DEFECTS,Reviewer confirmed defects in 10 image(s); recapture or repair is needed,Nguyễn Thành Tài - owner,out\poc\ranked_review.csv;out\poc\review_queue.csv;out\poc\audit_log.jsonl
